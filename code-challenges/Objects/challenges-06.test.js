@@ -7,16 +7,17 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
 
 const getCourseKeys = (obj) => {
   // Solution code here...
-//   for (var key in courseInfo) {
-//   return Object.courseInfo[key];
-        return Object.keys(courseInfo);
+  //   for (var key in courseInfo) {
+  //   return Object.courseInfo[key];
+  return Object.keys(courseInfo);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,10 +74,14 @@ let characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-//   Solution code here...
-  for (let values in characters.house){
-    houses = Object.values(values);
-    console.log('houses : ', houses);
+  //   Solution code here...
+  // for (let values in characters.house){
+  //   houses = Object.values(values);
+  //   console.log('houses : ', houses);
+  // }
+  // return houses;
+  for (let i = 0; i < characters.length; i++) {
+    houses.push(characters[i].house)
   }
   return houses;
 };
@@ -95,13 +100,13 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-    
-    // for (let values in characters.name){
-    //     var example = Object.values(values);
-    //     if(example){
-    //         return true;
-    //     }else return false;
-};
+
+  // for (let values in characters.name){
+  //     var example = Object.values(values);
+  //     if(example){
+  //         return true;
+  //     }else return false;
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
